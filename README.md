@@ -19,7 +19,7 @@
     - Note that the username has to be shorter than 12 characters, the email has to contain '@' and the age must be greater than or equal to 13.
     - Saved users can be found and instanciated by running `User.find(index)`
 - Having created and saved an user, now you can create your posts for any user
-    - Run `post = User.find(user_index).posts.build(title: => "title", body: => "body")` to create a post.
+    - Run `post = User.find(user_index).posts.build(:title => "title", :body => "body")` to create a post.
     - Then run `post.save` to save to the database. 
     - `post = Post.create(title: "title", body: "body", user_id: num)` can be used, but is prone to errors if the given index doesn't coincide with a user, so we do not recommend it.
     - The title is limited to 30 characters, and the body, to 100 characters.
